@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+
+<head>
+<title><ui:insert name="pageTitile"> Page Title</ui:insert></title>
+<style>
+	.order-table{
+	border:1px black solid;
+	}
+	.order-table-odd {
+	
+	background: #EEE;
+	}
+	.order-table-header{
+	font-weight:bold;
+	}
+	</style>
+</head>
+<body> 
+  <p>Welcome #{user.firstName}, #{user.lastName}</p>
+ <p> Benchmark API Assignment </p>
+ 
+  <!--  <h:dataTable value ="#{formController.service.verse}" var="o" styleClass="order-table"
+     headerClass ="order-table-header" rowClasses = "order-table-odd, order-table-even">
+  	<h:column>
+    		<f:facet name="header">Order number</f:facet>
+    	  #{o.bookName} 
+    	</h:column>
+    
+    <h:column>
+    		<f:facet name="header"> Product Name</f:facet>
+    		#{o.chapterNumber}
+    	</h:column>
+    <h:column>
+    		<f:facet name="header">Price</f:facet>
+    		#{o.versename}
+    	</h:column>
+    	
+    
+    </h:dataTable> -->
+    
+<!--  create a testresponse page by jsf command button -->
+<h:form>
+  <h:commandButton action="#{formController.onSendOrder}" value="Request API"/>
+
+</h:form>
+ 	
+
+	
+ <!--   <h:button outcome="OrderResponse.xhtml?faces-redirect=true" value="OrderResponse"/> -->
+	
+   <h:button outcome="login-form.xhtml?faces-redirect=true" value="Back to Login"/>
+	
+
+
+
+</body> 
+</html>
